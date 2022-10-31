@@ -1,5 +1,5 @@
-<h2 class="text-center">Log In</h2>
-<form [formGroup]="loginForm" (submit)="login()">
+<h2 class="text-center text-white">Log In</h2>
+<form [formGroup]="loginForm" (submit)="login()" class="text-white">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input
@@ -9,7 +9,7 @@
       formControlName="email"
       aria-describedby="emailHelp"
     />
-    <div id="emailHelp" class="form-text">
+    <div id="emailHelp" class="form-text text-info">
       We'll never share your email with anyone else.
     </div>
   </div>
@@ -20,7 +20,12 @@
       class="form-control"
       id="password"
       formControlName="password"
+      aria-describedby="passwordHelp"
+
     />
+    <div id="passwordHelp" class="form-text text-info">
+      New user? <a routerLink="cadastrar" class="text-warning">Register</a>
+    </div>
   </div>
-  <button type="submit"  class="btn btn-primary" >Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
